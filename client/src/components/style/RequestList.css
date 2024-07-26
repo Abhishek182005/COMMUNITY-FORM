@@ -21,7 +21,7 @@
 .request-table-container {
   width: 100%; /* Ensure it takes up full width */
   max-width: 600px; /* Match the maximum width of the form */
-  margin: 2% ;/* Center the table horizontally */
+  margin: 2%; /* Center the table horizontally */
 }
 
 /* Additional styling for responsiveness */
@@ -50,6 +50,7 @@
   margin-top: 20px;
 }
 
+/* Adjust width of request items uniformly */
 .request-item {
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -57,6 +58,9 @@
   margin-bottom: 20px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Full width within its container */
+  max-width: 400px; /* Fixed maximum width */
+  box-sizing: border-box; /* Includes padding and border in the width */
 }
 
 .request-item h3 {
