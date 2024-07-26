@@ -1,4 +1,4 @@
-# COMMUNITY-FORUM
+# COMMUNITY-FORM
 It is the MERN stack project made with the motive for the people to share their problems and suggestion on an issue.<br>
 And keep the track whther authorities have taken any action on this or not.<br>
 <ul>
