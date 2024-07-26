@@ -1,0 +1,64 @@
+/* src/components/RequestList.css */
+
+.request-list-container {
+    display: flex; /* Use flexbox for layout */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    gap: 20px; /* Space between form and list */
+    flex-wrap: wrap; /* Allow items to wrap when needed */
+}
+
+.request-form {
+    flex: 1; /* Allow the form to grow and shrink */
+    max-width: 400px; /* Set a maximum width for the form */
+}
+
+.request-list {
+    flex: 2; /* Allow the list to take more space */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between request items */
+    overflow-x: auto; /* Enable horizontal scroll if needed */
+}
+
+.request-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.resident-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.request-content {
+    margin-bottom: 10px;
+}
+
+.likes {
+    color: #888;    
+}
+
+.like-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .request-list-container {
+        flex-direction: column; /* Stack form and list vertically */
+    }
+
+    .request-form, .request-list {
+        max-width: 100%; /* Ensure full width on smaller screens */
+    }
+}
