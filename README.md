@@ -25,7 +25,8 @@ Color schemes are also used for both votes and action taken<br>
   <li> seen then blue</li>
   <li> no response then red</li>
 </ol>
-IT is localhost version for website version 
+It is localhost version <br>
+For website version 
 <a href="https://github.com/Abhishek182005/COMMUNITY-FORM-WEBSITE">Website Repository</a>
 
 <b>SNEAK PEAK</b>
