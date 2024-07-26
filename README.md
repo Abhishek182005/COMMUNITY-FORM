@@ -32,6 +32,9 @@ For website version
 <b>SNEAK PEAK</b>
 <br>
 <br>
+![image](https://github.com/user-attachments/assets/9562609c-8811-4f94-9134-9e50b2a7d7fd)
+<br>
+<br>
 ![image](https://github.com/user-attachments/assets/7b752203-e047-4095-a98b-43db85905d9b)
 <br>
 <br>
