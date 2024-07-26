@@ -50,7 +50,7 @@ const RequestForm = ({ onAddRequest }) => {
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='content'>Content:</label>
+          <label htmlFor='content'>Problem/ Suggestions:</label>
           <textarea
             id='content'
             value={content}
