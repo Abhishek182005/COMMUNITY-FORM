@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./style/RequestList.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Table, Button, Form } from "react-bootstrap";
+import { Table, Form, Button } from "react-bootstrap";
 
 const History = () => {
   const [requests, setRequests] = useState([]);
@@ -20,12 +20,12 @@ const History = () => {
     fetchRequests();
   }, []);
 
-  const handleLike = async (id) => {
+  const handleDelete = async (id) => {
     try {
-      await axios.patch(`http://localhost:5000/requests/${id}/like`);
-      fetchRequests();
+      await axios.delete(`http://localhost:5000/requests/${id}`);
+      setRequests(requests.filter((request) => request._id !== id));
     } catch (error) {
-      console.error("Error liking request:", error);
+      console.error("Error deleting request:", error);
     }
   };
 
@@ -71,19 +71,21 @@ const History = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
+            <th>S.No</th>
             <th>Resident Name</th>
             <th>Address</th>
             <th>Content</th>
             <th>Likes</th>
-            <th>Status</th>
+            <th>Authority Status</th>
             <th>Created At</th>
             <th>Update Status</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {requests.map((request) => (
+          {requests.map((request, index) => (
             <tr key={request._id}>
+              <td>{index + 1}</td>
               <td>{request.residentName}</td>
               <td>{request.residentAddress}</td>
               <td>{request.content}</td>
@@ -105,6 +107,14 @@ const History = () => {
                     <option value='action taken'>Action Taken</option>
                     <option value='no response'>No Response</option>
                   </Form.Select>
+                  <Button
+                    variant='danger'
+                    onClick={() => handleDelete(request._id)}
+                    className='ms-2'
+                    disabled={request.status !== "action taken"}
+                  >
+                    Delete
+                  </Button>
                 </div>
               </td>
             </tr>

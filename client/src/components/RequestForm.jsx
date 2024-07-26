@@ -57,9 +57,11 @@ const RequestForm = ({ onAddRequest }) => {
             onChange={(e) => setContent(e.target.value)}
           />
         </div>
+        <center>
         <button type='submit' className='submit-button'>
           Submit Request
         </button>
+        </center>
       </form>
     </div>
   );

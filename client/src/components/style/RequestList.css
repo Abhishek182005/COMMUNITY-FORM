@@ -1,64 +1,72 @@
 /* src/components/RequestList.css */
 
 .request-list-container {
-    display: flex; /* Use flexbox for layout */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    gap: 20px; /* Space between form and list */
-    flex-wrap: wrap; /* Allow items to wrap when needed */
+  padding: 20px;
 }
 
-.request-form {
-    flex: 1; /* Allow the form to grow and shrink */
-    max-width: 400px; /* Set a maximum width for the form */
+.row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
 }
 
-.request-list {
-    flex: 2; /* Allow the list to take more space */
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between request items */
-    overflow-x: auto; /* Enable horizontal scroll if needed */
+/* Ensure both columns have the same width */
+.col-md-4, .col-md-3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Adjust to fit the container */
+}
+
+/* Make the form and table take up 100% of their column width */
+.request-table-container {
+  width: 100%; /* Ensure it takes up full width */
+  max-width: 600px; /* Match the maximum width of the form */
+  margin: 2% ;/* Center the table horizontally */
+}
+
+/* Additional styling for responsiveness */
+@media (min-width: 768px) {
+  .request-list-container .row {
+    flex-wrap: nowrap;
+  }
+
+  .request-list-container .col-md-4,
+  .request-list-container .col-md-3 {
+    flex: 1;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .request-list-container .col-md-4,
+  .request-list-container .col-md-3 {
+    flex: 1 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/* Styling for request cards */
+.request-list-container .request-cards {
+  margin-top: 20px;
 }
 
 .request-item {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.resident-name {
-    font-weight: bold;
-    margin-bottom: 5px;
+.request-item h3 {
+  margin: 0;
 }
 
-.request-content {
-    margin-bottom: 10px;
+.request-item p {
+  margin: 5px 0;
 }
 
-.likes {
-    color: #888;    
-}
-
-.like-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .request-list-container {
-        flex-direction: column; /* Stack form and list vertically */
-    }
-
-    .request-form, .request-list {
-        max-width: 100%; /* Ensure full width on smaller screens */
-    }
+.request-item .like-button {
+  margin-top: 10px;
 }

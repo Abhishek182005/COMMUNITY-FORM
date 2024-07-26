@@ -26,14 +26,11 @@ const About = () => {
       <Title>About Community Forum</Title>
       <Paragraph>
         Welcome to the Community Forum, a place where residents can connect,
-        share ideas, and support each other. This platform allows you to raise
-        requests, express your opinions, and engage in discussions with fellow
-        community members.
+        share their problems suggetions, and support each other.
       </Paragraph>
       <Paragraph>
         We believe in fostering a sense of community and collaboration. Feel
-        free to explore the forum, like and contribute to requests, and be an
-        active participant in shaping our community.
+        free to explore the forum, like and contribute to requests.
       </Paragraph>
     </AboutContainer>
   );
